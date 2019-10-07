@@ -16,7 +16,8 @@ select <- dplyr::select
 filter <- dplyr::filter
 
 # Path to Rds file containing med related columns
-df_dir = 'C:/Users/Gareth/Box/rotation_project/_old/rotation_spring_2019/_backup_rotation_spring_2019/data/data.Rds'
+# USER MUST PROVIDE THE CORRECT PATH
+df_dir = 'path_to/data.Rds'
 
 df = readRDS(df_dir, stringsasfactors = FALSE)
 
