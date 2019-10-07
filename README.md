@@ -4,7 +4,9 @@ This tool provides logic and scripts for parsing classes of medications within t
 
 ### Steps:
 
-1) One must have the ABCD Rds file which contains appropriate columns for medications prefixes listed below. **User must edit path to provide path to their own .Rds file** 
+1) One must have the ABCD Rds file which contains appropriate columns for medications prefixes listed below. 
+
+**User must edit path to provide path to their own .Rds file** 
 
 Medication Prefixes of column names
 - medinv_plus_rxnorm_med  

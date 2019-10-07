@@ -19,7 +19,7 @@ filter <- dplyr::filter
 # USER MUST PROVIDE THE CORRECT PATH
 df_dir = 'path_to/data.Rds'
 
-df = readRDS(df_dir, stringsasfactors = FALSE)
+df = readRDS(df_dir)
 
 # Find indices of all rows with known medication prefixes in name
 var_inds = c(which(grepl('medinv_plus_rxnorm_med', names(df))),
