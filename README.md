@@ -1,3 +1,22 @@
-# abcd_meds
+# ABCD Medication Parsing
 
-Logic and scripts for parsing categories of medications listed in the rxNorm database for existing medications within the ABCD dataset
+This tool provides logic and scripts for parsing classes of medications within the ABCD Dataset
+
+### Steps:
+
+1) One must have the ABCD Rds file which contains appropriate columns for medications prefixes of medinv_plus_rxnorm_med, medinv_plus_otc_med, medinv_plus_otc_med
+2) Run the parse_meds.R script to output a .csv of all unique medications listed in the ABCD data release
+3) Run restful_get_rxnorm.py. 
+
+`parse_meds.R`  
+- Requires an .Rds file that contains relevant medication columns from the ABCD data release
+- Outputs "medication_tagging.csv" a file containing all unique medication IDs that exist within this .Rds file
+
+`restful_get_rxnorm.py`  
+- Calls the rxNorm REST API to grab information from the NLM/NIH rxNorm database to obtain classes of medications
+- Requires "medication_tagging.csv", generated from `parse_meds.R`
+
+### Notes:  
+- The logic for this medication parsing is consistent with that of an in development tool created by Hauke Bartsch
+- Thanks to Hauke for his help in working with the rxNorm database
+- For questions email me (Gareth) @ harmang (at) ohsu (dot) edu
